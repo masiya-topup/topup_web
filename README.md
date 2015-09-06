@@ -41,4 +41,26 @@ $ source /etc/profile.d/maven.sh
 ## Deployment
 * Clone code from git to home directory and move to virtual directory
 ```sh
+$ mkdir /home
+$ git clone https://github.com/masiya-topup/topup_web.git
+$ mkdir /mnt/topup_web
+$ chown -R apache:apache /mnt/topup_web/
+$ chmod -R 755 /mnt/topup_web/
+$ yes | cp -R /home/topup_web/* /mnt/topup_web/
+```
+* Setup a Document Root
+```sh
+$ nano /etc/httpd/conf/httpd.conf
+```
+* Setup a SSH for password less PULL
+* Daily steps
+```sh
+service httpd stop
+cd /home/topup_web/
+git pull
+yes | cp -R /home/topup_web/app/* /mnt/topup_web/app/
+yes | cp -R /home/topup_web/public/* /mnt/topup_web/public/
+echo "" > /mnt/topup_web/app/storage/logs/laravel.log
+service httpd start
+cd ~/
 ```
