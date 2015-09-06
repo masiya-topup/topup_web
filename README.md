@@ -53,7 +53,7 @@ $ yes | cp -R /home/topup_web/* /mnt/topup_web/
 * Setup a Document Root
 ```sh
 $ nano /etc/httpd/conf/httpd.conf
-ServerAdmin jayant4u@gmail.com
+ServerAdmin i.aburamadan@masiya.net
 DocumentRoot "/mnt/topup_web/public"
 <Directory "/mnt/topup_web/public">
 ```
