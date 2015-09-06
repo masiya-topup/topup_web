@@ -51,6 +51,9 @@ $ yes | cp -R /home/topup_web/* /mnt/topup_web/
 * Setup a Document Root
 ```sh
 $ nano /etc/httpd/conf/httpd.conf
+ServerAdmin jayant4u@gmail.com
+DocumentRoot "/mnt/topup_web/public"
+<Directory "/mnt/topup_web/public">
 ```
 * Setup a SSH for password less PULL
 * Daily steps
@@ -64,3 +67,5 @@ echo "" > /mnt/topup_web/app/storage/logs/laravel.log
 service httpd start
 cd ~/
 ```
+* Log Location
+* `/mnt/topup_web/app/storage/logs/laravel.log`
