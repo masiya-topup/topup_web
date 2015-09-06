@@ -1,4 +1,6 @@
-## Topup Frontend
+# Topup Frontend
+
+Currently setup is done taking into consideration api is on same server.
 
 ## Server setup
 * Apache, PHP, PHPMyadmin, Git & Maven
@@ -68,4 +70,6 @@ service httpd start
 cd ~/
 ```
 * Log Location
-* `/mnt/topup_web/app/storage/logs/laravel.log`
+  * `/var/log/httpd/access_log`
+  * `/var/log/httpd/error_log`
+  * `/mnt/topup_web/app/storage/logs/laravel.log`
